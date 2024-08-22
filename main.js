@@ -3,9 +3,11 @@
 const prompt = require('prompt-sync')();
 const utility = require('./utility');
 
-let numbersRequested = prompt(
-  'Enter the numbers for which you would like to know the Greatest Common Divisor: '
-); // Add the way to differenciate the two numbers.
+let firstNumber = prompt(
+  'Enter the first number for which you would like to know the Greatest Common Divisor: '
+);
 
+let secondNumber = prompt('Enter the second number now: ');
 
-utility.gdc(numbersRequested);
+utility.primeNumber(firstNumber, secondNumber);
+utility.gdc(firstNumber, secondNumber);
