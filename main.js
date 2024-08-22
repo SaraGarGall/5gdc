@@ -1,13 +1,16 @@
 /*5. GCD (Greatest Common Divisor): Write a program to find the greatest common divisor of two numbers. (Optional: can be advanced for some) */
 
-const prompt = require('prompt-sync')();
-const utility = require('./utility');
+import inquirer from 'inquirer';
+import { integerFactorization } from './utility.js';
 
-let firstNumber = prompt(
-  'Enter the first number for which you would like to know the Greatest Common Divisor: '
-);
+let answers = await inquirer.prompt([
+  {
+    type: 'number',
+    name: 'number',
+    message: 'Give me a number:'
+  }
+]);
 
-let secondNumber = prompt('Enter the second number now: ');
+const result = integerFactorization(answers.number);
 
-utility.primeNumber(firstNumber, secondNumber);
-utility.gdc(firstNumber, secondNumber);
+console.log(result)
