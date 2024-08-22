@@ -40,5 +40,4 @@ function gdc(firstNumber, secondNumber) {
   //Ahora tendria que elegir los divisores que se repiten el menor numero de veces (quizas mirar lo de reduce)
 }
 
-module.exports = { primeNumber };
-module.exports = { gdc };
+module.exports = { primeNumber, gdc };
