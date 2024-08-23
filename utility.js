@@ -24,15 +24,13 @@ export function integerFactorization(n) {
     if (primeNumber(n)) {
       arrayOfDivisor.push(n);
     } else {
-      /*quotient =
-        quotient % i == 0 ? quotient / i && arrayOfDivisor.push(i) : quotient;*/
-      if (quotient % i == 0) {
-        quotient = quotient / i;
-        arrayOfDivisor.push(i);
-        i--;
-      } else {
-        quotient = quotient;
-        continue;
+        if (quotient % i == 0) {
+          quotient = quotient / i;
+          arrayOfDivisor.push(i);
+          i--;
+        } else {
+          quotient = quotient;
+          continue;
       }
     }
   }
@@ -48,5 +46,3 @@ export function gdc(firstNumber, secondNumber) {
 
   //Ahora tendria que elegir los divisores que se repiten el menor numero de veces (quizas mirar lo de reduce)
 }
-
-// El for loop tendria que inicializarse cada evz que el cociente es diferente
