@@ -1,7 +1,4 @@
 export function primeNumber(n) {
-  //averiguar si el numero es primo o no
-  //numero primo es el que no se puede dividir por otro numero, solo por si mismo(n) y uno
-  //dividir entre los numeros >1 y <n, si da de resto 0, entonces es primo
   let result;
 
   for (let i = 2; i < n; i++) {
@@ -10,11 +7,8 @@ export function primeNumber(n) {
       return result;
     }
   }
-  //console.log(result);
   return result;
 }
-
-//SEGUIR REVISANDO ESTA FUNCION, PORQUE ESTA MAL
 
 export function integerFactorization(n) {
   let arrayOfDivisor = [];
@@ -37,7 +31,7 @@ export function integerFactorization(n) {
   return arrayOfDivisor;
 }
 
-export function gdc(firstNumber, secondNumber) {
+export function gcd(firstNumber, secondNumber) {
   let integersOfFirstNumber = integerFactorization(firstNumber);
   let integersOfSecondNumber = integerFactorization(secondNumber);
 
