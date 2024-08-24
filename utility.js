@@ -38,12 +38,23 @@ export function gcd(firstNumber, secondNumber) {
   let arrayOfCommons = [];
   let gcdResult = 1;
 
+  console.log("arrayOne is:", arrayOne);
+  console.log('arrayTwo is:', arrayTwo);
+
   for(let i = 0; i < arrayOne.length; i++){
     let arrayOneEl = arrayOne[i];
 
+    console.log('arrayOneEl is:', arrayOneEl);
+
     for (let j = 0; j < arrayTwo.length; j++) {
-      if(arrayOneEl == arrayTwo[j]){
-        arrayOfCommons.push(arrayTwo[j]);
+      let arrayTwoEl = arrayTwo[j];
+
+      console.log('arrayTwoEl is:', arrayTwoEl);
+
+      if(arrayOneEl == arrayTwoEl){
+        arrayOfCommons.push(arrayTwoEl);
+        break;
+        console.log('arrayOfCommons inside the loop is:', arrayOfCommons);
       } else {
         continue;
       }
@@ -52,6 +63,8 @@ export function gcd(firstNumber, secondNumber) {
 
     for(let i = 0; i < arrayOfCommons.length; i++){
       gcdResult = gcdResult * arrayOfCommons[i];
+      console.log("gcdResult inside the loop is:", gcdResult);
     }
+console.log("arrayOfCommons is:", arrayOfCommons)
 return gcdResult;
 }
