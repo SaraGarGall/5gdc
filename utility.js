@@ -31,30 +31,22 @@ export function integerFactorization(n) {
   return arrayOfDivisor;
 }
 
-//error found in program. It does not return the correct number
 export function gcd(firstNumber, secondNumber) {
   let arrayOne = integerFactorization(firstNumber);
   let arrayTwo = integerFactorization(secondNumber);
   let arrayOfCommons = [];
   let gcdResult = 1;
 
-  console.log("arrayOne is:", arrayOne);
-  console.log('arrayTwo is:', arrayTwo);
-
   for(let i = 0; i < arrayOne.length; i++){
     let arrayOneEl = arrayOne[i];
-
-    console.log('arrayOneEl is:', arrayOneEl);
 
     for (let j = 0; j < arrayTwo.length; j++) {
       let arrayTwoEl = arrayTwo[j];
 
-      console.log('arrayTwoEl is:', arrayTwoEl);
-
       if(arrayOneEl == arrayTwoEl){
-        arrayOfCommons.push(arrayTwoEl);
+        arrayOfCommons.push(arrayTwoEl); 
+        arrayTwo.shift(); //no estoy segura de esto
         break;
-        console.log('arrayOfCommons inside the loop is:', arrayOfCommons);
       } else {
         continue;
       }
@@ -63,8 +55,7 @@ export function gcd(firstNumber, secondNumber) {
 
     for(let i = 0; i < arrayOfCommons.length; i++){
       gcdResult = gcdResult * arrayOfCommons[i];
-      console.log("gcdResult inside the loop is:", gcdResult);
     }
-console.log("arrayOfCommons is:", arrayOfCommons)
-return gcdResult;
+
+  return gcdResult;
 }
