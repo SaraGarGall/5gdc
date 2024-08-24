@@ -39,9 +39,10 @@ export function gcd(firstNumber, secondNumber) {
 
   for(let i = 0; i < arrayOne.length; i++){
     let arrayOneEl = arrayOne[i];
-    for (let i = 0; i < arrayTwo.length; i++) {
-      if(arrayOneEl == arrayTwo[i]){
-        arrayOfCommons.push[arrayTwo[i]];
+
+    for (let j = 0; j < arrayTwo.length; j++) {
+      if(arrayOneEl == arrayTwo[j]){
+        arrayOfCommons.push(arrayTwo[j]);
       } else {
         continue;
       }
@@ -51,10 +52,5 @@ export function gcd(firstNumber, secondNumber) {
     for(let i = 0; i < arrayOfCommons.length; i++){
       gcdResult = gcdResult * arrayOfCommons[i];
     }
-
-
-/*const initialValue = 0;
-const gcdResult = arrayOfCommons.reduce((accumulator, currentValue)=>  accumulator * currentValue, initialValue);*/
-
 return gcdResult;
 }

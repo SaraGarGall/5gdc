@@ -22,4 +22,4 @@ let secondNumber = await inquirer.prompt([
 
 const result = gcd(firstNumber.number, secondNumber.number);
 
-console.log("the GCD of", firstNumber, "and", secondNumber, "is:", result);
+console.log("the GCD of", firstNumber.number, "and", secondNumber.number, "is:", result);
