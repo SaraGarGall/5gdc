@@ -32,11 +32,29 @@ export function integerFactorization(n) {
 }
 
 export function gcd(firstNumber, secondNumber) {
-  let integersOfFirstNumber = integerFactorization(firstNumber);
-  let integersOfSecondNumber = integerFactorization(secondNumber);
+  let arrayOne = integerFactorization(firstNumber);
+  let arrayTwo = integerFactorization(secondNumber);
+  let arrayOfCommons = [];
+  let gcdResult = 1;
 
-  console.log(integersOfFirstNumber);
-  console.log(integersOfSecondNumber);
+  for(let i = 0; i < arrayOne.length; i++){
+    let arrayOneEl = arrayOne[i];
+    for (let i = 0; i < arrayTwo.length; i++) {
+      if(arrayOneEl == arrayTwo[i]){
+        arrayOfCommons.push[arrayTwo[i]];
+      } else {
+        continue;
+      }
+    }
+  }
 
-  //Ahora tendria que elegir los divisores que se repiten el menor numero de veces (quizas mirar lo de reduce)
+    for(let i = 0; i < arrayOfCommons.length; i++){
+      gcdResult = gcdResult * arrayOfCommons[i];
+    }
+
+
+/*const initialValue = 0;
+const gcdResult = arrayOfCommons.reduce((accumulator, currentValue)=>  accumulator * currentValue, initialValue);*/
+
+return gcdResult;
 }

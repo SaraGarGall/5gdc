@@ -1,7 +1,7 @@
 /*5. GCD (Greatest Common Divisor): Write a program to find the greatest common divisor of two numbers. (Optional: can be advanced for some) */
 
 import inquirer from 'inquirer';
-import { gdc } from './utility.js';
+import { gcd } from './utility.js';
 
 let firstNumber = await inquirer.prompt([
   {
@@ -22,5 +22,4 @@ let secondNumber = await inquirer.prompt([
 
 const result = gcd(firstNumber.number, secondNumber.number);
 
-console.log("descomposicion de los dos numeros", result)
-//console.log("the GCD of", , "is:", );
+console.log("the GCD of", firstNumber, "and", secondNumber, "is:", result);
