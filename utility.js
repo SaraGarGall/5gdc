@@ -31,6 +31,7 @@ export function integerFactorization(n) {
   return arrayOfDivisor;
 }
 
+//error found in program. It does not return the correct number
 export function gcd(firstNumber, secondNumber) {
   let arrayOne = integerFactorization(firstNumber);
   let arrayTwo = integerFactorization(secondNumber);
